@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Person</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container pt-5">
+            <div class="row justify-content-center">
+                <div class="col-10 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">New Person Register</div>
+                        </div>
+                        <div class="card-body">
+                            <div v-show="full_name != null && congrats == false">
+                                <div class="text-center">
+                                    <figure class="figure">
+                                        <img :src="picture" class="figure-img img-fluid rounded-circle" style="width: 140px; height: 140px; background-color: #EFEFEF;">
+                                    </figure>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <b class="d-block text-secondary">Name</b>
+                                        <h4>{{full_name}}</h4>
+                                    </li>
+                                    <li class="mb-3">
+                                        <b class="d-block text-secondary">Gender</b>
+                                        <h4>{{gender}}</h4>
+                                    </li>
+                                    <li class="mb-3">
+                                        <b class="d-block text-secondary">City</b>
+                                        <h4>{{city}}</h4>
+                                    </li>
+                                    <li class="mb-3">
+                                        <b class="d-block text-secondary">State</b>
+                                        <h4>{{state}}</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div v-show="full_name == null && congrats == false" class="text-center">
+                                <h4>Generate Person</h4>
+                                <p>Generate a new person for storage in database.</p>
+                                <p><button class="btn btn-success" v-on:click="generate()">Generate</button></p>
+                            </div>
+                            <div v-show="congrats == true" class="text-center">
+                                <h4>Congratulations!</h4>
+                                <p>You storaged a new person in database.</p>
+                                <p><button class="btn btn-success" v-on:click="generate()">Generate new Person</button></p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="float-end">
+                                <button class="btn btn-outline-dark" :disabled="(full_name == null)" v-on:click="resetUI()">Cancel</button>
+                                <button class="btn btn-primary" :disabled="(full_name == null)" v-on:click="save()">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="./">Go to list</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/js/register.js"></script>
+
+</body>
+</html>
