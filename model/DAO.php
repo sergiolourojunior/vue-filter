@@ -5,7 +5,7 @@ class DAO extends PDO {
     public function __construct() {
 
         $param = [
-            'DB_HOST' => '172.100.0.3',
+            'DB_HOST' => 'localhost',
             'DB_PORT' => 3306,
             'DB_NAME' => 'filter',
             'DB_USER' => 'root',

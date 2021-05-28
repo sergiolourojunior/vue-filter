@@ -7,6 +7,7 @@ A small system of register and listing results with filter interactives.
 - Axios – [Github repository](https://github.com/axios/axios)
 - Bootstrap – [Github repository](https://github.com/twbs/bootstrap)
 - Bootstrap Icons – [Github repository](https://github.com/twbs/icons)
+- Random User Generator – [Official Website](https://randomuser.me/)
 - PHP – [Github repository](https://github.com/php/)
 - HTML 5
 
