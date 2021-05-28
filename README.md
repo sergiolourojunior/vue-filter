@@ -1,4 +1,4 @@
-# Filter
+# Vue Filter
 
 A small system of register and listing results with filter interactives.
 
@@ -11,10 +11,10 @@ A small system of register and listing results with filter interactives.
 - HTML 5
 
 ## Installation
-To install a system is fast and easy.
+To install the system is fast and easy.
 
 1. Create a database;
-2. Configure data access in the file `model/DAO.php`;
+2. Configure access data in the file `model/DAO.php`;
 3. Create a table `person`:
     ```sql
     CREATE TABLE IF NOT EXISTS `person` (
